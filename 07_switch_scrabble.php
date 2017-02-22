@@ -16,27 +16,22 @@ $punten = 0;
 // N 1 punt
 for ($i = 0; $i < strlen($woord); $i++){
     switch ($woord[$i]){
-        case q:
-        echo "Q 10 punten";
+        case 'o':
+        case 'e':
+        case 'i':
+        case 'n':
+        $punten += 1;
         break;
-        case u:
-        echo "U 4 punten";
+        case 't':
+        case 'r':
+        $punten += 2;
+        case 'u':
+        $punten += 4;
         break;
-        case o:
-        echo "O 1 punten";
-        break;
-        case t:
-        echo "T 2 punten";
-        break;
-        case r:
-        echo "R 2 punten";
-        break;
-        case e:
-        case i:
-        case n:
-        echo $woord[$i]+ " 1 punt";
+        case 'q':
+        $punten = 10;
         break;
     }
 }
-
+echo "Je hebt ".$punten. " punten behaald";
 ?>
